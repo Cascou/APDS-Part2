@@ -1,0 +1,53 @@
+GET https://localhost:3000/api/issue HTTP/1.1
+###
+POST https://localhost:3000/api/issue HTTP/1.1
+content-type: application/json
+
+{
+    "id": "1",
+    "subject": "Potholes",
+    "description": "There are potholes on M3 Cape Town",
+    "department": "Roadwork Construction",
+    "province": "Western Cape",
+    "date": "2023/10/05"
+}
+###
+DELETE https://localhost:3000/api/issue/651e87e5c92b11c3a439cef2 HTTP/1.1
+###
+POST https://localhost:3000/api/user/signup HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Sebastien",
+    "surname": "Guibert",
+    "username": "Guibertosss",
+    "password": "12345"
+}
+###
+POST https://localhost:3000/api/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Guibertosss",
+    "password": "12345"
+}
+###
+POST https://localhost:3000/api/issue HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikd1aWJlcnRvc3NzIiwidXNlcmlkIjoiNjUyMjY3YzFhYmM5NmNhMjNmOTY1MmRmIiwiaWF0IjoxNjk2NzUzNjAyLCJleHAiOjE2OTY3NTcyMDJ9.IPrqOhCWK_QZTTiHyEw6c1CpTLcfCwJr4HngquYNTpY
+{
+    "id": "2",
+    "subject": "Potholes",
+    "description": "There are potholes on M3 Cape Town",
+    "department": "Roadwork Construction",
+    "province": "Western Cape",
+    "date": "2023/10/05"
+}
+###
+DELETE https://localhost:3000/api/issue/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikd1aWJlcnRvc3NzIiwidXNlcmlkIjoiNjUyMDMyZThhMjliYWRhOWRkM2ViODlhIiwiaWF0IjoxNjk2NjA5MDA1LCJleHAiOjE2OTY2MTI2MDV9.nz4u2eV05lh2GX-biQ6hVIyNZqzB8SyiZlkrZoXiAJk
+###
+GET https://localhost:3000/api/issue HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikd1aWJlcnRvc3NzIiwidXNlcmlkIjoiNjUyMDMyZThhMjliYWRhOWRkM2ViODlhIiwiaWF0IjoxNjk2NjA5MDA1LCJleHAiOjE2OTY2MTI2MDV9.nz4u2eV05lh2GX-biQ6hVIyNZqzB8SyiZlkrZoXiAJk
